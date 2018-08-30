@@ -1,0 +1,32 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if error %}
+<br>
+{{ error }}
+<br>
+<br>
+{% endif %}
+{% load staticfiles %}
+<div class="jumbotron text-center">
+<img class="mb-4" src="{% static 'letter-d.png' %}" alt="" width="72" height="72">
+<h2>Please Sign In</h2>
+
+<form class="" action="{% url 'login' %}" method="POST">
+ {% csrf_token %}
+
+<br>
+ <input type="text" name="username" value="" placeholder="User Name"/>
+<br>
+
+<br>
+<input type="password" name="password" placeholder="Password" />
+<br>
+<br>
+
+<input class="btn btn-primary" type="submit" name="" value="Login">
+</form>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% load staticfiles %}
+{% if error %}
+<br>
+{{ error }}
+<br>
+<br>
+{% endif %}
+
+<div class="jumbotron text-center">
+<img class="mb-4" src="{% static 'letter-d.png' %}" alt="" width="72" height="72">
+
+<h2>Sign up</h2>
+
+<form class="" action="{% url 'signup' %}" method="POST">
+ {% csrf_token %}
+ <div class="form-group">
+<!-- <label for="User Name">User Name:</label> -->
+ <input type="text" name="username" value="" placeholder="User name"/>
+<br>
+<!-- <label for="Password">Password:</label> -->
+<br>
+<input type="password" name="password1" placeholder="Password" />
+<br>
+<!-- <label for="Password2">Confirm Password:</label> -->
+<br>
+<input type="password" name="password2" placeholder="Confirm Password" />
+<br>
+<br>
+<input class="btn btn-primary" type="submit" name="" value="Sign Up!">
+</div>
+</form>
+</div>
+
+{% endblock %}

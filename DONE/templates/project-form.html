@@ -1,24 +1,55 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container">
+
+
+<div class="jumbotron">
+
+
     <h1>New / Update project</h1>
+
+    </div>
+
+    <div class="container">
+      <div class="row">
+
+
+      <div class="col-md-6">
+
+
+
+
     <br>
+
     <form   method="POST">
       {% csrf_token %}
       {{ form.as_p }}
-      <button type="submit" name="button">Save</button>
+      <button class = "btn btn-primary" type="submit" name="button">Save</button>
+      <a class = "btn btn-secondary" href="{% url 'list_projects' %}">cancel</a>
+
+      {% if project %}
+      <a class = "btn btn-danger" href="{% url 'delete_project' project.id %}">Delete</a>
+
+      {% endif %}
+
 
     </form>
+    <br>
+</div>
+<div class="col-md-2">
 
-{% if project %}
-<a href="{% url 'delete_project' project.id %}">Delete</a>
+</div>
+<div class="col-md-4">
+  <h3>This can be an area where you explain what types of projects get DONE!</h3>
+</div>
+<br>
+<!-- {% if project %}
+<a href="{% url 'delete_project' project.id %}"><button class = "btn btn-danger" type="button" >Delete</button></a>
 
-{% endif %}
+{% endif %} -->
+    </div>
 
-
-  </body>
-</html>
+{% endblock %}
+</div>

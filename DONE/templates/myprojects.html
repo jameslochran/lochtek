@@ -1,24 +1,111 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <ul>
+{% extends 'base.html' %}
 
+
+{% block content %}
+<div class="container">
+  <div class="row">
+  <div class="col-md-12">
+
+{% if user.is_authenticated %}
+<br>
+<div class="jumbotron">
+
+
+<h4>My projects</h4>
+
+</div>
+  <div class="row">
 
     {% for project in projects %}
-     <a href="{% url 'update_project' project.id %}">
-    <li> {{ project.title }}-- {{ project.description }}</li>
-  </a>
+
+      <div class="col-sm-6">
+    <div class="card" >
+      <div class="row">
+
+
+      <div class="col-1" style="margin-left:10px; margin-right:10px; margin-top:15px">
+        <span class="category-{{ project.type }}">
+          <!-- <img class="category-{{ project.type }}"  alt="Card image cap"> -->
+
+      </div>
+      <div class="col">
+
+
+        <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
+    <div class="card-body">
+     <a href="{% url 'update_project' project.id %}">  <h5 class="card-title">{{ project.title }}</h5></a>
+       <p class="card-text">{{ project.summary }}</p>
+     <!-- <a href="{% url 'update_project' project.id %}"> -->
+    <!-- <li> {{ project.title }}{{ project.description }}</li> -->
+  <!-- </a> -->
+  <a href="{% url 'update_project' project.id %}" class="btn btn-outline-info">Edit Project</a>
+</div>
+</div>
+</div>
+  </div>
     <br>
-    {% endfor %}
+</div>
 
+  {% endfor %}
+
+  </div>
+    <br>
+
+
+
+<hr>
+
+
+
+
+    </div>
+    <a class="btn btn-primary" href="{% url 'create_project'%}">New Project</a>
+
+  </div>
+
+
+
+
+
+
+
+
+  <!-- </div> -->
+
+{% else %}
+{% load staticfiles %}
+
+
+<div class="jumbotron jumbotron-carousel corporate-jumbo">
+    <div class="carousel-item active">
+      <!-- <img src="{% static 'helloquence-61189-unsplash.jpg' %}" class="img-fluid" alt="Responsive image"> -->
+<div style="padding-left:10%">
+
+
+    <h1>Welcome to DONE!</h1>
+  <p class="lead">Get your projects DONE
+    <ul>
+      <li>FAST</li>
+      <li>RIGHT</li>
+      <li>AFFORDABLY</li>
 </ul>
+      </p>
+
+    <h3>Sign up for free.</h3>
+    <br>
+  <a class="btn btn-success" href="{% url 'signup' %}" role="button">Sign up</a>
+</div>
+</div>
+</div>
 
 
 
-    <a href="{% url 'create_project'%}">New Project</a>
-  </body>
-</html>
+
+{% endif %}
+
+
+
+</div>
+</div>
+
+{% endblock %}
