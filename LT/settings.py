@@ -56,7 +56,11 @@ ROOT_URLCONF = 'LT.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+<<<<<<< HEAD
         'DIRS': ['lochtek/LT/templates'],
+=======
+        'DIRS': ['LT/templates'],
+>>>>>>> 7ce6a9300a88045e867e4e9bb6d694b1b6967af8
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
