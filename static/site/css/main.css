@@ -186,7 +186,7 @@ body>.navbar-transparent {
   display: block;
   width: 120px;
   height: 120px;
-  background-image: url("/static/site/img/blueprint.png");
+  background-image: url("/static/site/img/growth.png");
   background-position: 0 0;
   background-repeat: no-repeat;
 }
@@ -201,15 +201,15 @@ body>.navbar-transparent {
   display: block;
   width: 128px;
   height: 128px;
-  background-image: url("/static/site/img/chip-s.png");
+  background-image: url("/static/site/img/project-management.png");
   background-position: 0 0;
   background-repeat: no-repeat;
 }
 .category-Mechanical {
   display: block;
-  width: 128px;
-  height: 128px;
-  background-image: url("/static/site/img/mechanical-gears-.png");
+  width: 64px;
+  height: 64px;
+  background-image: url("/static/site/img/solution.png");
   background-position: 0 0;
   background-repeat: no-repeat;
 }
@@ -225,7 +225,7 @@ body>.navbar-transparent {
   display: block;
   width: 120px;
   height: 120px;
-  background-image: url("/static/site/img/blueprint.png");
+  background-image: url("/static/site/img/negotiation.png");
   background-position: 0 0;
   background-repeat: no-repeat;
 }
