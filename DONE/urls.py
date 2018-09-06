@@ -1,9 +1,9 @@
 from django.urls import path
-from .views import list_projects, create_project, update_project, delete_project
-
+from .views import list_projects, create_project, update_project, delete_project, home
 
 urlpatterns = [
-    path('', list_projects, name='list_projects'),
+    path('', home, name='home'),
+    path('dashboard', list_projects, name='list_projects'),
     path('new', create_project, name='create_project'),
     path('update/<int:id>/', update_project, name='update_project'),
     path('delete/<int:id>/', delete_project, name='delete_project'),

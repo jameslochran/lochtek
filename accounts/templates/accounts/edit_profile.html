@@ -1,5 +1,9 @@
-
 {% extends 'base.html' %}
+
+
+{% block head %}
+<title>Profile</title>
+{% endblock %}
 
 {% block content %}
 <div class="container">
@@ -7,21 +11,16 @@
 
 <div class="jumbotron">
 
-
+</div>
 <div class="container">
-    <h1>Welcome</h1>
-    <p>
-        You can log in here!
-    </p>
-    <h2>Login</h2>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Login</button>
+        <button type="submit">Submit</button>
     </form>
     <br>
-  <!-- <a class = "btn btn-primary btn-sm" href="{% url 'reset_password' %}">Reset Password</a> -->
 </div>
 </div>
 </div>
+
 {% endblock %}

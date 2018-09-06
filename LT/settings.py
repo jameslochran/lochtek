@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'DONE',
     'accounts',
+
+
+
 ]
 
 MIDDLEWARE = [
@@ -49,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'LT.middleware.LoginRequiredMiddleware',
 ]
 
 ROOT_URLCONF = 'LT.urls'
@@ -131,3 +135,7 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
+
+#test email configuratuon
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 1025

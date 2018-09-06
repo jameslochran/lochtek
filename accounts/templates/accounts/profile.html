@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+<div class="container">
+
+<div class="jumbotron">
+<h1>Welcome to DONE!</h1>
+<p>Your account is now active. Click the create button below to get started. </p>
+<br>
+
+<a class = "btn btn-info btn-lg" href="{% url 'create_project' %}">Get Started!</a>
+<a class = "btn btn-success btn-lg" href="{% url 'list_projects' %}">Your Projects</a>
+</div>
+<br>
+<div class="container">
+<h2>My Profile</h2>
+<br>
+
+
+    <p>Username: {{ user }}</p>
+    <p>First name: {{ user.first_name }}</p>
+    <p>Last name: {{ user.last_name }}</p>
+    <p>Email: {{ user.email }}</p>
+
+
+<a class = "btn btn-primary" href="{% url 'edit_profile' %}">Edit Profile</a>
+<a class = "btn btn-secondary" href="{% url 'list_projects' %}">Cancel</a>
+</div>
+
+</div>
+
+{% endblock %}

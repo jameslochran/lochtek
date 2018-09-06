@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+{% load staticfiles %}
+
+<div class="container">
+
+
+<div class="jumbotron jumbotron-carousel corporate-jumbo">
+    <div class="carousel-item active">
+      <!-- <img src="{% static 'helloquence-61189-unsplash.jpg' %}" class="img-fluid" alt="Responsive image"> -->
+<div style="padding-left:10%">
+
+
+    <h1>Welcome to DONE!</h1>
+  <p class="lead">Get your projects DONE
+    <ul>
+      <li>FAST</li>
+      <li>RIGHT</li>
+      <li>AFFORDABLY</li>
+</ul>
+      </p>
+
+    <h3>Sign up for free.</h3>
+    <br>
+  <a class="btn btn-success" href="{% url 'register' %}" role="button">Sign up</a>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+</div>
+
+{% endblock %}
