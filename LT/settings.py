@@ -141,6 +141,10 @@ MEDIA_URL = '/media/'
 # EMAIL_PORT = 1025
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 
+<<<<<<< HEAD
 EMAIL_HOST_PASSWORD =
+=======
+EMAIL_HOST_PASSWORD = 
+>>>>>>> f38505d5bac383fb0c9ade9530fc7bbca3de5b76
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
