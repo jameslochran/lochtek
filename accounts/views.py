@@ -46,12 +46,15 @@ def view_profile(request, pk=None):
 @login_required
 def edit_profile(request):
     if request.method == 'POST':
-        form = EditProfileForm(request.POST, instance=request.user.userprofile)
+        form = EditProfileForm(request.POST, instance=request.user)
 
         if form.is_valid():
             form.save()
-            return redirect('list_projects')
-            # return redirect(reverse('accounts:view_profile'))
+            # return redirect('list_projects')
+            return redirect(reverse('accounts:view_profile'))
+        return render(request, 'accounts/edit_profile.html', {'form': form})
+
+
     else:
         form = EditProfileForm(instance=request.user)
 
@@ -75,6 +78,10 @@ def change_password(request):
 
         args = {'form': form}
         return render(request, 'accounts/change_password.html', args)
+
+
+
+    #HttpResponse('Success! Thank you for your message.')
 
     # template_name = "accounts/edit_profile.html"
     # http_method_names = ['get', 'post']

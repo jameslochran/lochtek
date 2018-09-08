@@ -36,8 +36,8 @@ class RegistrationForm(UserCreationForm):
 
 
 class EditProfileForm(UserChangeForm):
-    template_name='/something/else'
-    # email = forms.EmailField(required=True)
+    # template_name='/something/else'
+    email = forms.EmailField(required=True)
     website = forms.URLField(required=False)
     title = forms.CharField(required=False)
     company = forms.CharField(required=False)
@@ -55,3 +55,13 @@ class EditProfileForm(UserChangeForm):
             'password',
 
 )
+    # def save(self, commit=True):
+    #     profile = super(EditProfileForm, self).save(commit=False)
+    #     profile.company = self.cleaned_data['company']
+    #     profile.title = self.cleaned_data['title']
+    #     profile.website = self.cleaned_data['website']
+    #
+    #     if commit:
+    #         profile.save()
+    #
+    #     return profile

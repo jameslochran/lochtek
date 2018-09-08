@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import list_projects, create_project, update_project, delete_project, home
+from .views import list_projects, create_project, update_project, delete_project, home, emailView, successView
 
 urlpatterns = [
     path('', home, name='home'),
@@ -7,5 +7,7 @@ urlpatterns = [
     path('new', create_project, name='create_project'),
     path('update/<int:id>/', update_project, name='update_project'),
     path('delete/<int:id>/', delete_project, name='delete_project'),
+    path('email/<int:id>/', emailView, name='email'),
+    path('success/', successView, name='success'),
 
 ]
