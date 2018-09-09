@@ -1,8 +1,9 @@
 from django import forms
 from .models import Project
+from django.contrib.auth.models import User
 
 class ProjectForm(forms.ModelForm):
-                    
+
     title = forms.CharField()
 
     description = forms.CharField(widget=forms.Textarea(
@@ -20,11 +21,20 @@ class ProjectForm(forms.ModelForm):
         }
     ))
 
+    class Meta:
+        model = Project
+        fields = ['title', 'description', 'type', 'location', 'support', 'phone', 'contact_me', 'timeframe']
 
 
+
+class ContactForm(forms.Form):
+    # from_email = forms.EmailField(required=True)
+    # subject = forms.CharField(required=True)
+    message = forms.CharField(widget=forms.Textarea, required=True)
+    # project_Name = forms.CharField(required=True)
 
 
 
     class Meta:
         model = Project
-        fields = ['title', 'description', 'type', 'location', 'support', 'phone', 'contact_me', 'timeframe']
+        fields = ['message']

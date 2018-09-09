@@ -1,0 +1,10 @@
+{% load i18n %}{% autoescape off %}
+{% blocktrans %}You're receiving this email because {{ user.get_username }} has requested a quote for thier {{ project }} project.{% endblocktrans %}
+
+{% trans "The client left the following message with the project: {{ message }}" %}
+
+{% trans Please login to the DONE admin to get the details on {{ project }} project."Thanks for using our site!" %}
+
+{% blocktrans %}The {{ site_name }} team{% endblocktrans %}
+
+{% endautoescape %}

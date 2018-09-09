@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+<div class="container">
+
+<div class="jumbotron">
+<h1>Welcome to DONE!</h1>
+<p>Your account is now active. Click the create button below to get started. </p>
+
+<br>
+
+<a class = "btn btn-info btn-lg" href="{% url 'create_project' %}">Get Started!</a>
+<a class = "btn btn-success btn-lg" href="{% url 'list_projects' %}">Your Projects</a>
+</div>
+<br>
+<div class="container">
+<h2>My Profile</h2>
+<br>
+<div class="row">
+    <div class="col-sm-4">
+      <ul class="list-group">
+<li class="list-group-item text-muted">User Profile</li>
+<li class="list-group-item text-right"><span class="pull-left"><strong>Email:</strong></span> {{ user.email }}</li>
+<li class="list-group-item text-right"><span class="pull-left"><strong>Username:</strong></span> {{ user }}</li>
+<li class="list-group-item text-right"><span class="pull-left"><strong>First Name:</strong></span> {{ user.first_name }}</li>
+<li class="list-group-item text-right"><span class="pull-left"><strong>Last Name:</strong></span> {{ user.last_name }}</li>
+</ul>
+</div>
+    <!-- <p>Username: {{ user }}</p>
+    <p>First name: {{ user.first_name }}</p>
+    <p>Last name: {{ user.last_name }}</p> -->
+
+    <div class="col-sm-8">
+          <div class="panel panel-default">
+            <div class="panel-heading">{{ user.get_full_name }}'s Personal Profile
+
+              <div class="panel-body">
+                <strong>Company Name</strong>: {{ user.userprofile.company }}
+
+              <br>
+                <strong>Title</strong>: {{ user.userprofile.title }}
+
+               <br>
+              <strong>Website</strong>: {{ user.userprofile.website }}
+
+
+            </div>
+</div>
+</div>
+</div>
+</div>
+
+    <!-- <p>Company: {{ user.userprofile.company }}</p>
+    <p>Title: {{ user.userprofile.title }}</p>
+    <p>Website: {{ user.userprofile.website }}</p> -->
+
+<br>
+<br>
+
+<a class = "btn btn-primary" href="{% url 'accounts:edit_profile' %}">Edit Profile</a>
+<a class = "btn btn-secondary" href="{% url 'list_projects' %}">Cancel</a>
+</div>
+
+</div>
+
+{% endblock %}
