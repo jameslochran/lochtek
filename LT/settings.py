@@ -25,7 +25,7 @@ SECRET_KEY = '@n35^kkz7nuzso1(5kpf0i^@&1nc0^-1ysjz#4@jztro^c!fro'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['jlochran.pythonanywhere.com']
 
 
 # Application definition
@@ -60,7 +60,9 @@ ROOT_URLCONF = 'LT.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['LT/templates'],
+        'DIRS': ['lochtek/LT/templates'],
+
+
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -128,8 +130,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'LT/static/')
 
 ]
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = '/home/jlochran/lochtek/static'
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -140,7 +142,12 @@ MEDIA_URL = '/media/'
 # EMAIL_HOST = 'localhost'
 # EMAIL_PORT = 1025
 EMAIL_HOST = 'smtp.gmail.com'
+<<<<<<< HEAD
 # EMAIL_HOST_USER =
 # EMAIL_HOST_PASSWORD =
+=======
+EMAIL_HOST_USER =
+EMAIL_HOST_PASSWORD =
+>>>>>>> e1ea00bc714dae46bd8628a3a38d18edf93ac503
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
