@@ -23,7 +23,7 @@ def register(request):
         if form.is_valid():
             form.save()
             # return redirect(reverse('accounts:view_profile'))
-            return redirect('login')
+            return redirect('accounts:login')
         return render(request, 'accounts/reg_form.html', {'form': form})
 
 
