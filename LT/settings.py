@@ -142,7 +142,10 @@ MEDIA_URL = '/media/'
 # EMAIL_HOST = 'localhost'
 # EMAIL_PORT = 1025
 EMAIL_HOST = 'smtp.gmail.com'
+
 EMAIL_HOST_USER ='jimlochran@gmail.com'
 EMAIL_HOST_PASSWORD ='Organug07'
+
+
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
