@@ -25,7 +25,7 @@ SECRET_KEY = '@n35^kkz7nuzso1(5kpf0i^@&1nc0^-1ysjz#4@jztro^c!fro'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['jlochran.pythonanywhere.com']
+ALLOWED_HOSTS = ['jlochran.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -60,7 +60,8 @@ ROOT_URLCONF = 'LT.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['lochtek/LT/templates'],
+        'DIRS': ['LT/templates'],
+        # 'DIRS': ['lochtek/LT/templates'], change this to deploy
 
 
         'APP_DIRS': True,
@@ -142,12 +143,11 @@ MEDIA_URL = '/media/'
 # EMAIL_HOST = 'localhost'
 # EMAIL_PORT = 1025
 EMAIL_HOST = 'smtp.gmail.com'
-<<<<<<< HEAD
-# EMAIL_HOST_USER =
-# EMAIL_HOST_PASSWORD =
-=======
-EMAIL_HOST_USER =
-EMAIL_HOST_PASSWORD =
->>>>>>> e1ea00bc714dae46bd8628a3a38d18edf93ac503
+
+
+
+EMAIL_HOST_USER = 'jimlochran@gmail.com'
+EMAIL_HOST_PASSWORD = 'Organug07'
+
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True

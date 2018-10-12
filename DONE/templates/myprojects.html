@@ -35,6 +35,9 @@
     <div class="card-body">
      <a href="{% url 'update_project' project.id %}">  <h5 class="card-title">{{ project.title }}</h5></a>
        <p class="card-text">{{ project.summary }}</p>
+       <!-- {% if user.is_staff %}
+       <p class="card-text">{{ project.estimatedProjectCost }}</p>
+       {% endif %} -->
 
      <!-- <a href="{% url 'update_project' project.id %}"> -->
     <!-- <li> {{ project.title }}{{ project.description }}</li> -->

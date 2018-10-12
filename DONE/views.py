@@ -56,7 +56,7 @@ def delete_project(request, id):
 def emailView(request, id):
     User = get_user_model()
     project = Project.objects.get(id=id)
-    print (project)
+    print (project.paymentterms)
     if request.method == 'GET':
         form = ContactForm()
         # form.from_email = request.user.email
@@ -68,12 +68,12 @@ def emailView(request, id):
         if form.is_valid():
             from_email = request.user.email
             subject = 'Please send me a quote'
-            message = form.cleaned_data['message']
-            recipient_list = ['jimlochran@gmail.com',]
-            html_message = '<h2> Please review project </h2>'
+            message = 'Client message: ' + form.cleaned_data['message'] + '\n Project title: ' + project.title +  '\n How I want to be contacted: ' + project.contact_me + '\n Description: ' + project.description + '\n Type: ' + project.type + '\n Support: ' + project.support + '\n Timeframe: ' + project.timeframe + '\n Login to DONE admin for details http://127.0.0.1:8000/admin/'
+            recipient_list = ['jlochran@gmail.com']
+            # html_message = '<h2> Please review project</h2>'
 
             try:
-                send_mail (subject, message, from_email, recipient_list, html_message=html_message)
+                send_mail (subject, message, from_email, recipient_list)
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('success')
