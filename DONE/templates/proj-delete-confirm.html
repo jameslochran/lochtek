@@ -2,10 +2,18 @@
 
 
 {% block content %}
-    <form method="POST">
+<div class="container">
+
+
+<div class="jumbotron">
+
+   <form method="POST">
       {% csrf_token %}
     <h2>Are you sure you want to delete the {{ project.title }} title?</h2>
-    <button class=btn btn-danger" type="submit" >Confirm</button>
+    <button class="btn btn-danger" type="submit" >Confirm</button>
         </form>
+  </div> 
+  </div>
+
 
 {% endblock %}

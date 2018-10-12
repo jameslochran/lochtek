@@ -33,8 +33,15 @@
 
         <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
     <div class="card-body">
-     <a href="{% url 'update_project' project.id %}">  <h5 class="card-title">{{ project.title }}</h5></a>
+     <a href="{% url 'update_project' project.id %}">
+       {% if project.title == '' %}
+         <h5 class="card-title">{{ project.id }}</h5>
+      {% else %}
+        <h5 class="card-title">{{ project.title }}</h5>
+        {% endif %}
+       </a>
        <p class="card-text">{{ project.summary }}</p>
+
        <!-- {% if user.is_staff %}
        <p class="card-text">{{ project.estimatedProjectCost }}</p>
        {% endif %} -->

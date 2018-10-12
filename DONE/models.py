@@ -72,19 +72,19 @@ class Project(models.Model):
         (pt180days, 'Net 180 days')
         )
 
-    stfulltime = 'Full-time'
-    sthalftime = '1/2 time'
-    stquartertime = '1/4 time'
+    stfulltime = 'Onsite'
+    sthalftime = 'Offsite'
+    stquartertime = 'Both'
     SITETIME = (
-        (stfulltime, 'Full-time'),
-        (sthalftime, '1/2 time'),
-        (stquartertime, '1/4 time')
+        (stfulltime, 'Onsite'),
+        (sthalftime, 'Offsite'),
+        (stquartertime, 'Both')
         )
 
 
 
     customer = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=100, null=True, blank=True)
     description = models.TextField(("description"), max_length=2000, null=True, blank=True)
     date_created = models.DateTimeField(("date"), auto_now_add = True)
     date_changed = models.DateTimeField(("changed date"), auto_now = True)
@@ -92,7 +92,7 @@ class Project(models.Model):
     location = models.TextField(('location'), max_length=500, null=True, blank=True)
     support = models.CharField(("Support Needed"), max_length=100, choices=SUPPORT, default='Project Manager')
     estimated_time =  models.CharField(("Estimated project duration"), max_length=100, choices=ESTIMATED_TIME, default='1 month')
-    sitetime = models.CharField(("Time on site"), max_length=100, choices=SITETIME, default='Full-time')
+    sitetime = models.CharField(("Support Location"), max_length=100, choices=SITETIME, default='Onsite')
     paymentterms = models.CharField(("Payment terms"), max_length=100, choices=PAYMENTTERMS, default='Net 30 days ')
     phone = models.CharField(('Phone'), max_length=20, null=True, blank=True)
     contact_me = models.CharField(("Best Way to Contact Me"), max_length=100, choices=CONTACT_ME, default='Email')
