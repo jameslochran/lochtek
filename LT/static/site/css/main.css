@@ -4,6 +4,49 @@ html, body{
     height:100%;		/* For full height images */
 }
 
+.carousel-caption {
+	right: 15%;
+	bottom: 10px;
+	left: 15%;
+	z-index: 10;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #050505;
+	text-align: left;
+  font-size: .75em;
+	position: absolute;
+}
+
+@media screen and (min-width: 400px) {
+  .carousel-caption  {
+  	right: 15%;
+  	bottom: 10px;
+  	left: 15%;
+  	z-index: 10;
+  	padding-top: 5px;
+  	padding-bottom: 5px;
+  	color: #050505;
+  	text-align: left;
+    font-size: 1.5em;
+  	position: absolute;
+
+}
+
+@media screen and (min-width:1000px) {
+  .carousel-caption {
+  	right: 15%;
+  	bottom: 200px;
+  	left: 15%;
+  	z-index: 10;
+  	padding-top: 5px;
+  	padding-bottom: 5px;
+  	color: #050505;
+  	text-align: left;
+    font-size: 2em;
+  	position: absolute;
+
+}
+
 .starter-template {
   padding: 40px 15px;
   text-align: center;
@@ -66,7 +109,7 @@ body>.navbar-transparent {
 }
 
 /* Home page styling */
-.corporate-jumbo {
+/* .corporate-jumbo {
     background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)),
       url("/static/site/img/helloquence-61189-unsplash.jpg");
     background-repeat: no-repeat;
@@ -109,7 +152,7 @@ body>.navbar-transparent {
     padding: 100px 0;
     background: #e0e0e0;
     margin-top: 100px;
-}
+} */
 
 .footer a:hover {
     text-decoration: none;

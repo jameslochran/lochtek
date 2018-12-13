@@ -20,10 +20,12 @@ class Project(models.Model):
     project_manager = 'Project Manager'
     construction_manager = 'Construction Manager'
     admin = 'Admin'
+    sales = 'Technical Sales'
     SUPPORT = (
         (project_manager, 'Project Manager'),
         (construction_manager, 'Construction Manager'),
-        (admin,'Admin')
+        (admin,'Admin'),
+        (sales, 'Technical Sales')
          )
 
     email_me = 'Email'

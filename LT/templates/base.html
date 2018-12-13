@@ -5,6 +5,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -19,25 +20,32 @@
 
   </head>
 
+
   <body>
 
     <header>
       <div class="container">
 
 
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container">
         <a class="navbar-brand" href="{% url 'home' %}">
         <img src="{% static 'letter-d.png' %}" height="30" width="30" class="d-inline block align-top"/> DONE</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
+
+
           <div class="navbar-nav ml-auto"   >
+            <!-- <a class="nav-item nav-link" href="{% url 'create_project' %}"><span class="oi oi-plus"> </span> New Project</a> -->
             {% if user.is_authenticated %}
-            <a class="nav-item nav-link left" href="{% url 'list_projects' %}">Dashboard</a>
+            <a class="nav-item nav-link" href="{% url 'create_project' %}"><span class="oi oi-plus"> </span> New Project</a>
+            <a class="nav-item nav-link left" href="{% url 'list_projects' %}">Your Projects</a>
+            <a class="nav-item nav-link" href="mailto:?subject=Check%20this%20great%20site%20for%20getting%20Things%20Done%20http://www.done.com" target="_self" aria-label="">
+                <span class="oi oi-envelope-closed">  </span> Share</a>
               <a class="nav-item nav-link" href="{% url 'accounts:view_profile' %}"><span class="oi oi-person"></span> {{ user.get_username }}</a>
-            <a class="nav-item nav-link" href="{% url 'create_project' %}"><span class="oi oi-plus"></span> </a>
               <a class="nav-item nav-link" href="javascript:{document.getElementById('logout').submit()}" onclick= "">Logout <span class="sr-only"></span></a>
                <form class=""id='logout' action="{% url 'accounts:logout' %}" method="POST">
                   {% csrf_token %}
