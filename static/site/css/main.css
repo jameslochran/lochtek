@@ -178,8 +178,86 @@ body>.navbar-transparent {
 .form-box form .form-control:focus {
   z-index: 2;
 }
+.category-Architectural {
+  display: block;
+  width: 120px;
+  height: 120px;
+  background-image: url("/static/site/img/124-hierarchical-structure-32x32.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+  /* background-image: url("/static/site/img/blueprint.png");
+  background-repeat: no-repeat;
+  background-position: 10% center;
+  background-attachment: fixed;
+  -webkit-background-size: auto;
+  background-size: auto;
+} */
+.category-Electrical {
+  display: block;
+  width: 128px;
+  height: 128px;
+  background-image: url("/static/site/img/107-planning-32x32.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+.category-Mechanical {
+  display: block;
+  width: 64px;
+  height: 64px;
+  background-image: url("/static/site/img/057-development-32x32.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+.category-Structural {
+  display: block;
+  width: 128px;
+  height: 128px;
+  background-image: url("/static/site/img/087-settings-32x32.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+.category-Multi-discipline{
+  display: block;
+  width: 120px;
+  height: 120px;
+  background-image: url("/static/site/img/035-chat-32x32.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
 
-.category- {
+.myprojects {
+  background-image: url("/static/construction-workers-daylight-men-544971.jpg");
+  background-color: #f8f6f6;
+  height: 300px;
+  /* background-position: left; */
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  position: relative;
+}
+
+.newprojects {
+  /* background-image: url("/static/construction-workers-daylight-men-544971.jpg"); */
+  background-color: #f8f6f6;
+  height: 300px;
+  text-align: center;
+  /* background-position: left; */
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  position: relative;
+}
+
+
+.myprojects-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
+/* .category- {
     background: transparent;
 }
 .category-Architectural {
@@ -197,11 +275,12 @@ body>.navbar-transparent {
   -webkit-background-size: auto;
   background-size: auto;
 } */
+/*
 .category-Electrical {
   display: block;
   width: 128px;
   height: 128px;
-  background-image: url("/static/site/img/project-management.png");
+  background-image: url("/static/site/img/107-planning.png");
   background-position: 0 0;
   background-repeat: no-repeat;
 }
@@ -228,4 +307,4 @@ body>.navbar-transparent {
   background-image: url("/static/site/img/negotiation.png");
   background-position: 0 0;
   background-repeat: no-repeat;
-}
+} */

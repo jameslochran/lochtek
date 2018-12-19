@@ -92,3 +92,15 @@ def emailView(request, id):
 
 def successView(request):
     return render(request, "success.html")
+
+def base_layout(request):
+	# template='home.html'
+    return render(request, 'home.html')
+
+def contactView(request):
+    # template='contact.html'
+    return render(request, 'contact.html')
+
+def aboutView(request):
+    # template='about.html'
+    return render(request, 'about.html')

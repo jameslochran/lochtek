@@ -31,6 +31,7 @@ html, body{
   	position: absolute;
 
 }
+}
 
 @media screen and (min-width:1000px) {
   .carousel-caption {
@@ -45,6 +46,7 @@ html, body{
     font-size: 2em;
   	position: absolute;
 
+}
 }
 
 .starter-template {
@@ -89,7 +91,7 @@ body>.navbar-transparent {
 }
 
 .navbar-nav > li > a {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .navbar-brand {
@@ -225,11 +227,12 @@ body>.navbar-transparent {
 .category- {
     background: transparent;
 }
+
 .category-Architectural {
   display: block;
   width: 120px;
   height: 120px;
-  background-image: url("/static/site/img/growth.png");
+  background-image: url("/static/site/img/124-hierarchical-structure-32x32.png");
   background-position: 0 0;
   background-repeat: no-repeat;
 }
@@ -244,7 +247,7 @@ body>.navbar-transparent {
   display: block;
   width: 128px;
   height: 128px;
-  background-image: url("/static/site/img/project-management.png");
+  background-image: url("/static/site/img/107-planning-32x32.png");
   background-position: 0 0;
   background-repeat: no-repeat;
 }
@@ -252,7 +255,7 @@ body>.navbar-transparent {
   display: block;
   width: 64px;
   height: 64px;
-  background-image: url("/static/site/img/solution.png");
+  background-image: url("/static/site/img/057-development-32x32.png");
   background-position: 0 0;
   background-repeat: no-repeat;
 }
@@ -260,7 +263,7 @@ body>.navbar-transparent {
   display: block;
   width: 128px;
   height: 128px;
-  background-image: url("/static/site/img/blueprint.png");
+  background-image: url("/static/site/img/087-settings-32x32.png");
   background-position: 0 0;
   background-repeat: no-repeat;
 }
@@ -268,7 +271,145 @@ body>.navbar-transparent {
   display: block;
   width: 120px;
   height: 120px;
-  background-image: url("/static/site/img/negotiation.png");
+  background-image: url("/static/site/img/035-chat-32x32.png");
   background-position: 0 0;
   background-repeat: no-repeat;
+}
+
+.myprojects {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)),
+    url("/static/Joy_Oil_gas_station_blueprints.jpg");
+  /* background-image: url("/static/construction-workers-daylight-men-544971.jpg"); */
+  background-color: #f8f6f6;
+  height: 400px;
+  /* background-position: left; */
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  position: relative;
+}
+
+.newprojects {
+  /* background-image: url("/static/construction-workers-daylight-men-544971.jpg"); */
+  background-color: #f8f6f6;
+  height: 300px;
+  text-align: center;
+  /* background-position: left; */
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  position: relative;
+}
+
+
+
+.myprojects-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
+html,
+body {
+	font-size: 14px !important;
+}
+h1 {
+	font-size: 1.602em;
+}
+h2 {
+	font-size: 1.424em;
+}
+h3 {
+	font-size: 1.266em;
+}
+h4 {
+	font-size: 1.125em;
+}
+h5 {
+	font-size: 0.889em;
+}
+h6 {
+	font-size: 0.79em;
+}
+.display-1 {
+	font-size: 3.906em;
+}
+.display-2 {
+	font-size: 3.125em;
+}
+.display-3 {
+	font-size: 2.5em;
+}
+.display-4 {
+	font-size: 2em;
+}
+
+// Medium devices (tablets, 48em and up)
+//
+// At this point you have overridden Bootstraps rem's and are
+// into module based font sizes should you require it.
+//
+// I took a while over this change because I felt that there
+// is no reason why I cant use a modified scale on another
+// device size. So I did, the headings have now taken on
+// "Perfect Fourth" and the dislpay-* has been put to the
+// Bootstrap defaults.
+//
+//------------------------------------------------------------//
+@media (min-width: 48em) {
+	h1 {
+	  font-size: 2.441em;
+	}
+	h2 {
+		font-size: 1.953em;
+	}
+	h3 {
+		font-size: 1.563em;
+	}
+	h4 {
+		font-size: 1.25em;
+	}
+	.display-1 {
+		font-size: 6em;
+	}
+	.display-2 {
+		font-size: 5.5em;
+	}
+	.display-3 {
+		font-size: 4.5em;
+	}
+	.display-4 {
+		font-size: 3.5em;
+	}
+}
+
+// Large devices (desktops, 62em and up)
+@media (min-width: 62em) {
+	html,
+	body {
+		font-size: 16px !important;
+	}
+}
+
+// Extra large devices (large desktops, 75em and up)
+@media (min-width: 75em) {
+	html,
+	body {
+		font-size: 18px !important;
+	}
+}
+
+// Pen Specific Styles
+.jumbotron {
+	font-size: 16px;
+	@media (min-width: 62em) {
+		font-size: 20px;
+	}
+	h1 {
+		border-bottom: 4px solid #0275d8;
+	}
+	p.lead {
+		border-radius: 4px;
+	}
 }

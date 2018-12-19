@@ -15,6 +15,8 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'DONE/static/js', 'serviceworker.js')
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
@@ -39,9 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'DONE',
     'accounts',
-
-
-
+    'pwa',
 ]
 
 MIDDLEWARE = [
@@ -151,3 +151,16 @@ EMAIL_HOST_PASSWORD = 'Organug07'
 
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+PWA_APP_NAME = 'DONE'
+PWA_APP_DESCRIPTION = "Get projects done fast!!!"
+PWA_APP_THEME_COLOR = '#0A0302'
+PWA_APP_BACKGROUND_COLOR = '#ffffff'
+PWA_APP_DISPLAY = 'standalone'
+PWA_APP_START_URL = '/'
+PWA_APP_ICONS = [
+    {
+        'icons': 'static/letter-d.png',
+        'sizes': '160x160'
+    }
+]
