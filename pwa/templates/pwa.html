@@ -1,0 +1,69 @@
+<!-- Path to manifest.json -->
+<link rel="manifest" href="/manifest.json">
+
+<!-- Icons for Apple Devices -->
+{% for icon in PWA_APP_ICONS %}
+    <link rel="apple-touch-icon" href="{{ icon.src }}" sizes="{{ icon.sizes }}">
+{% endfor %}
+
+<meta name="theme-color" content="{{ PWA_APP_THEME_COLOR }}">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="{{ PWA_APP_NAME }}">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<!-- <meta name="msapplication-TileImage" content="/static/images/icons/icon-144x144.png">
+<meta name="msapplication-TileColor" content="#fff">
+<meta name="theme-color" content="#3f51b5"> -->
+
+<script type="text/javascript">
+    // Initialize the service worker
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/serviceworker.js', {
+            scope: '/' // <--- THIS BIT IS REQUIRED
+        }).then(function (registration) {
+            // Registration was successful
+            console.log('django-progressive-web-app: DONE ServiceWorker registration successful with scope: ', registration.scope);
+        }, function (err) {
+            // registration failed :(
+            console.log('django-progressive-web-app: ServiceWorker registration failed: ', err);
+        });
+    }
+var deferredPrompt;
+window.addEventListener('beforeinstallprompt', function(event) {
+  console.log('beforeinstallprompt fired');
+  event.preventDefault();
+  deferredPrompt = event;
+  // deferredPrompt.prompt();
+  return false;
+});
+// let deferredPrompt;
+// const addBtn = document.querySelector('.add-button');
+// addBtn.style.display = 'block';
+//
+// window.addEventListener('beforeinstallprompt', (e) => {
+//   // Prevent Chrome 67 and earlier from automatically showing the prompt
+//   e.preventDefault();
+//   // Stash the event so it can be triggered later.
+//   deferredPrompt = e;
+//   // Update UI to notify the user they can add to home screen
+//   addBtn.style.display = 'block';
+//   deferredPrompt.prompt();
+//
+//   addBtn.addEventListener('click', (e) => {
+//     // hide our user interface that shows our A2HS button
+//     addBtn.style.display = 'none';
+//     // Show the prompt
+//     deferredPrompt.prompt();
+//     // Wait for the user to respond to the prompt
+//     deferredPrompt.userChoice.then((choiceResult) => {
+//         if (choiceResult.outcome === 'accepted') {
+//           console.log('User accepted the A2HS prompt');
+//         } else {
+//           console.log('User dismissed the A2HS prompt');
+//         }
+//         deferredPrompt = null;
+//       });
+//   });
+// });
+
+</script>

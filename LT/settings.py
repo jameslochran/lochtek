@@ -139,24 +139,65 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
 
+# try:
+#     from .local_settings import *
+# except ImportError:
+#     pass
+
 #test email configuratuon
 # EMAIL_HOST = 'localhost'
 # EMAIL_PORT = 1025
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'jimlochran@gmail.com'
-EMAIL_HOST_PASSWORD = 'Organug07'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'sample@gmail.com'
+# EMAIL_HOST_PASSWORD = 'sample'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
 
 PWA_APP_NAME = 'DONE'
-PWA_APP_DESCRIPTION = "Get projects done fast!!!"
+PWA_APP_DESCRIPTION = "An Application to get things DONE!"
 PWA_APP_THEME_COLOR = '#0A0302'
 PWA_APP_BACKGROUND_COLOR = '#ffffff'
 PWA_APP_DISPLAY = 'standalone'
+PWA_APP_ORIENTATION = 'any'
 PWA_APP_START_URL = '/'
 PWA_APP_ICONS = [
     {
-        'icons': 'static/letter-d.png',
-        'sizes': '160x160'
+        'src': '/static/images/icons/icon-72x72.png',
+        'sizes': '72x72'
+    },
+    {
+        'src': '/static/images/icons/icon-96x96.png',
+        'sizes': '96x96'
+    },
+    {
+        'src': '/static/images/icons/icon-128x128.png',
+        'sizes': '128x128'
+    },
+    {
+        'src': '/static/images/icons/icon-144x144.png',
+        'sizes': '144x144'
+    },
+    {
+        'src': '/static/images/icons/icon-152x152.png',
+        'sizes': '152x152'
+    },
+    {
+        'src': '/static/images/icons/icon-192x192.png',
+        'sizes': '192x192'
+    },
+    {
+        'src': '/static/images/icons/icon-384x384.png',
+        'sizes': '384x384'
+    },
+    {
+        'src': '/static/images/icons/icon-512x512.png',
+        'sizes': '512x512'
     }
 ]
+PWA_APP_DIR = 'ltr'
+PWA_APP_LANG = 'en-US'
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass

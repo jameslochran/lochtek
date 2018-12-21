@@ -4,6 +4,13 @@ html, body{
     height:100%;		/* For full height images */
 }
 
+.add-button {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  /* display: "none";" */
+}
+
 .carousel-caption {
 	right: 15%;
 	bottom: 10px;
@@ -571,4 +578,7 @@ section .section-title {
 
 #contact .card:hover i,#contact .card:hover h4{
 	color: #3b88c3;
+}
+.BtnAdd {
+  display: none;
 }
