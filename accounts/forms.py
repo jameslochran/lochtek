@@ -38,9 +38,9 @@ class RegistrationForm(UserCreationForm):
 class EditProfileForm(UserChangeForm):
     # template_name='/something/else'
     email = forms.EmailField(required=True)
-    website = forms.URLField(required=False)
-    title = forms.CharField(required=False)
-    company = forms.CharField(required=False)
+    # website = forms.URLField(required=False)
+    # title = forms.CharField(required=False)
+    # company = forms.CharField(required=False)
 
 
     class Meta:
@@ -49,9 +49,9 @@ class EditProfileForm(UserChangeForm):
             'email',
             'first_name',
             'last_name',
-            'company',
-            'website',
-            'title',
+            # 'company',
+            # 'website',
+            # 'title',
             'password',
 
 )

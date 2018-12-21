@@ -4,6 +4,59 @@ html, body{
     height:100%;		/* For full height images */
 }
 
+.add-button {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  /* display: "none";" */
+}
+
+.carousel-caption {
+	right: 15%;
+	bottom: 10px;
+	left: 15%;
+	z-index: 10;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #f7f4f4;
+	text-align: left;
+  font-size: .75em;
+	position: absolute;
+  background-image: linear-gradient(to left, rgba(255,0,0,0), rgba(24, 23, 62, 0.29));
+}
+
+@media screen and (min-width: 400px) {
+  .carousel-caption  {
+  	right: 15%;
+  	bottom: 10px;
+  	left: 15%;
+  	z-index: 10;
+  	padding-top: 5px;
+  	padding-bottom: 5px;
+  	color: #f7f4f4;
+  	text-align: left;
+    font-size: 1.5em;
+  	position: absolute;
+
+}
+}
+
+@media screen and (min-width:1000px) {
+  .carousel-caption {
+  	right: 15%;
+  	bottom: 200px;
+  	left: 15%;
+  	z-index: 10;
+  	padding-top: 5px;
+  	padding-bottom: 5px;
+  	color: #f7f4f4;
+  	text-align: left;
+    font-size: 2em;
+  	position: absolute;
+
+}
+}
+
 .starter-template {
   padding: 40px 15px;
   text-align: center;
@@ -46,7 +99,7 @@ body>.navbar-transparent {
 }
 
 .navbar-nav > li > a {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .navbar-brand {
@@ -66,7 +119,7 @@ body>.navbar-transparent {
 }
 
 /* Home page styling */
-.corporate-jumbo {
+/* .corporate-jumbo {
     background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)),
       url("/static/site/img/helloquence-61189-unsplash.jpg");
     background-repeat: no-repeat;
@@ -109,7 +162,7 @@ body>.navbar-transparent {
     padding: 100px 0;
     background: #e0e0e0;
     margin-top: 100px;
-}
+} */
 
 .footer a:hover {
     text-decoration: none;
@@ -182,11 +235,12 @@ body>.navbar-transparent {
 .category- {
     background: transparent;
 }
+
 .category-Architectural {
   display: block;
   width: 120px;
   height: 120px;
-  background-image: url("/static/site/img/growth.png");
+  background-image: url("/static/site/img/124-hierarchical-structure-32x32.png");
   background-position: 0 0;
   background-repeat: no-repeat;
 }
@@ -201,7 +255,7 @@ body>.navbar-transparent {
   display: block;
   width: 128px;
   height: 128px;
-  background-image: url("/static/site/img/project-management.png");
+  background-image: url("/static/site/img/107-planning-32x32.png");
   background-position: 0 0;
   background-repeat: no-repeat;
 }
@@ -209,7 +263,7 @@ body>.navbar-transparent {
   display: block;
   width: 64px;
   height: 64px;
-  background-image: url("/static/site/img/solution.png");
+  background-image: url("/static/site/img/057-development-32x32.png");
   background-position: 0 0;
   background-repeat: no-repeat;
 }
@@ -217,7 +271,7 @@ body>.navbar-transparent {
   display: block;
   width: 128px;
   height: 128px;
-  background-image: url("/static/site/img/blueprint.png");
+  background-image: url("/static/site/img/087-settings-32x32.png");
   background-position: 0 0;
   background-repeat: no-repeat;
 }
@@ -225,7 +279,306 @@ body>.navbar-transparent {
   display: block;
   width: 120px;
   height: 120px;
-  background-image: url("/static/site/img/negotiation.png");
+  background-image: url("/static/site/img/035-chat-32x32.png");
   background-position: 0 0;
   background-repeat: no-repeat;
+}
+
+.myprojects {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)),
+    url("/static/Joy_Oil_gas_station_blueprints.jpg");
+  /* background-image: url("/static/construction-workers-daylight-men-544971.jpg"); */
+  background-color: #f8f6f6;
+  height: 300px;
+  /* background-position: left; */
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  position: relative;
+}
+
+.newprojects {
+  /* background-image: url("/static/construction-workers-daylight-men-544971.jpg"); */
+  background-color: #f8f6f6;
+  height: 300px;
+  text-align: center;
+  /* background-position: left; */
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  position: relative;
+}
+
+
+.myprojects-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+}
+
+.dashboard-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f7f4f4;
+}
+
+/* .carousel-caption {
+	right: 15%;
+	bottom: 10px;
+	left: 15%;
+	z-index: 10;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #f7f4f4;
+	text-align: left;
+  font-size: .75em;
+	position: absolute;
+  background-image: linear-gradient(to left, rgba(255,0,0,0), rgba(24, 23, 62, 0.29));
+} */
+
+html,
+body {
+	font-size: 14px !important;
+}
+h1 {
+	font-size: 1.602em;
+}
+h2 {
+	font-size: 1.424em;
+}
+h3 {
+	font-size: 1.266em;
+}
+h4 {
+	font-size: 1.125em;
+}
+h5 {
+	font-size: 0.889em;
+}
+h6 {
+	font-size: 0.79em;
+}
+.display-1 {
+	font-size: 3.906em;
+}
+.display-2 {
+	font-size: 3.125em;
+}
+.display-3 {
+	font-size: 2.5em;
+}
+.display-4 {
+	font-size: 2em;
+}
+
+// Medium devices (tablets, 48em and up)
+//
+// At this point you have overridden Bootstraps rem's and are
+// into module based font sizes should you require it.
+//
+// I took a while over this change because I felt that there
+// is no reason why I cant use a modified scale on another
+// device size. So I did, the headings have now taken on
+// "Perfect Fourth" and the dislpay-* has been put to the
+// Bootstrap defaults.
+//
+//------------------------------------------------------------//
+@media (min-width: 48em) {
+	h1 {
+	  font-size: 2.441em;
+	}
+	h2 {
+		font-size: 1.953em;
+	}
+	h3 {
+		font-size: 1.563em;
+	}
+	h4 {
+		font-size: 1.25em;
+	}
+	.display-1 {
+		font-size: 6em;
+	}
+	.display-2 {
+		font-size: 5.5em;
+	}
+	.display-3 {
+		font-size: 4.5em;
+	}
+	.display-4 {
+		font-size: 3.5em;
+	}
+}
+
+// Large devices (desktops, 62em and up)
+@media (min-width: 62em) {
+	html,
+	body {
+		font-size: 16px !important;
+	}
+}
+
+// Extra large devices (large desktops, 75em and up)
+@media (min-width: 75em) {
+	html,
+	body {
+		font-size: 18px !important;
+	}
+}
+
+// Pen Specific Styles
+.jumbotron {
+	font-size: 16px;
+	@media (min-width: 62em) {
+		font-size: 20px;
+	}
+	h1 {
+		border-bottom: 4px solid #0275d8;
+	}
+	p.lead {
+		border-radius: 4px;
+	}
+}
+
+/* FontAwesome for working BootSnippet :> */
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+#team {
+    background: #eee !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #108d6f;
+    border-color: #108d6f;
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007b5e;
+    border-color: #007b5e;
+}
+
+section {
+    padding: 60px 0;
+}
+
+/* #3b88c3 */
+
+section .section-title {
+    text-align: center;
+    color: #3b88c3;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#team .card {
+    border: none;
+    background: #ffffff;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    border-radius: .25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.mainflip {
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.frontside {
+    position: relative;
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.backside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 1s;
+    -moz-transform-style: preserve-3d;
+    -o-transition: 1s;
+    -o-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+    min-height: 312px;
+}
+
+.backside .card a {
+    font-size: 18px;
+    color: #3b88c3!important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+    color: #3b88c3 !important;
+}
+
+.frontside .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+#contact .card:hover i,#contact .card:hover h4{
+	color: #3b88c3;
+}
+.BtnAdd {
+  display: none;
 }

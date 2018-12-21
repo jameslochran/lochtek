@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class ProjectForm(forms.ModelForm):
 
-    title = forms.CharField()
+    title = forms.CharField(required=False)
 
     description = forms.CharField(widget=forms.Textarea(
         attrs={
@@ -23,14 +23,23 @@ class ProjectForm(forms.ModelForm):
 
     class Meta:
         model = Project
-        fields = ['title', 'description', 'type', 'location', 'support', 'phone', 'contact_me', 'timeframe']
+        fields = ['title', 'description', 'type', 'location', 'support', 'estimated_time','sitetime', 'paymentterms', 'phone', 'contact_me', 'timeframe']
 
 
 
 class ContactForm(forms.Form):
     # from_email = forms.EmailField(required=True)
     # subject = forms.CharField(required=True)
-    message = forms.CharField(widget=forms.Textarea, required=True)
+    message = forms.CharField(widget=forms.Textarea(
+        attrs={
+            'class': 'form-control',
+            'placeholder': 'Please provide any additional information...',
+            'rows' :'3',
+}
+
+
+
+    ), required=True)
     # project_Name = forms.CharField(required=True)
 
 

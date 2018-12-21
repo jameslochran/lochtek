@@ -5,10 +5,17 @@
 <div class="container">
 
 
-<div class="jumbotron">
+<div class="newprojects">
+<div class="myprojects-text">
 
+  <h1 class="display-4">(NEW)</h1>
+  <h1 class="display-1">PROJECT</h1>
+  <h1 class="display-3">COMING SOON</h1>
 
-    <h1>New / Update project</h1>
+  </div>
+    <br>
+
+    </div>
 
     </div>
 
@@ -18,15 +25,13 @@
 
       <div class="col-md-6">
 
-
-
-
     <br>
-
+<h3>Complete the form below to get your project DONE!</h3>
+<br>
     <form   method="POST">
       {% csrf_token %}
       {{ form.as_p }}
-      <button class = "btn btn-primary" type="submit" name="button">Save</button>
+      <button class = "btn btn-primary" type="submit" name="button">Save & Submit for quote</button>
       <a class = "btn btn-secondary" href="{% url 'list_projects' %}">cancel</a>
 
       {% if project %}
@@ -42,7 +47,63 @@
 
 </div>
 <div class="col-md-4">
-  <h3>This can be an area where you explain what types of projects get DONE!</h3>
+  <br>
+  <h2>Projects that get DONE!</h2>
+  <div class="card-deck">
+  <div class="card" style="width: 18rem;">
+    <br>
+  <img class="card-img-top" src="/static/site/img/124-hierarchical-structure-32x32.png"  style="align-self: center;width: 32px;" alt="Card image cap">
+  <div class="card-body">
+    <h4 class="card-title">Architectural</h4>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <br>
+<img class="card-img-top" src="/static/site/img/057-development-32X32.png" style="align-self: center;width: 32px;" alt="Card image cap">
+<div class="card-body">
+  <h4 class="card-title">Mechanical</h4>
+  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+</div>
+</div>
+</div>
+<br>
+<div class="card-deck">
+<div class="card" style="width: 18rem;">
+  <br>
+<img class="card-img-top" src="/static/site/img/087-settings-32x32.png" style="align-self: center;width: 32px;" alt="Card image cap">
+<div class="card-body">
+  <h4 class="card-title">Structural</h4>
+  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+</div>
+</div>
+<div class="card" style="width: 18rem;">
+  <br>
+<img class="card-img-top" src="/static/site/img/107-planning-32x32.png" style="align-self: center;width: 32px;" alt="Card image cap">
+<div class="card-body">
+  <h4 class="card-title">Electrical</h4>
+  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+</div>
+</div>
+</div>
+<br>
+<div class="card-deck">
+<div class="card" style="width: 18em;">
+  <br>
+<img class="card-img-top" src="/static/site/img/035-chat-32x32.png" style="align-self: center;width: 32px;" alt="Card image cap">
+<div class="card-body">
+  <h4 class="card-title">Multi-discipline</h4>
+  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+</div>
+</div>
+
+
+</div>
 </div>
 <br>
 <!-- {% if project %}

@@ -15,6 +15,8 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'DONE/static/js', 'serviceworker.js')
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
@@ -25,7 +27,7 @@ SECRET_KEY = '@n35^kkz7nuzso1(5kpf0i^@&1nc0^-1ysjz#4@jztro^c!fro'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['jlochran.pythonanywhere.com']
+ALLOWED_HOSTS = ['jlochran.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -39,9 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'DONE',
     'accounts',
-
-
-
+    'pwa',
 ]
 
 MIDDLEWARE = [
@@ -60,7 +60,8 @@ ROOT_URLCONF = 'LT.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['lochtek/LT/templates'],
+        'DIRS': ['LT/templates'],
+        # 'DIRS': ['lochtek/LT/templates'], change this to deploy
 
 
         'APP_DIRS': True,
@@ -138,9 +139,70 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
 
+# try:
+#     from .local_settings import *
+# except ImportError:
+#     pass
+
 #test email configuratuon
 # EMAIL_HOST = 'localhost'
 # EMAIL_PORT = 1025
+<<<<<<< HEAD
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'sample@gmail.com'
+# EMAIL_HOST_PASSWORD = 'sample'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+
+PWA_APP_NAME = 'DONE'
+PWA_APP_DESCRIPTION = "An Application to get things DONE!"
+PWA_APP_THEME_COLOR = '#0A0302'
+PWA_APP_BACKGROUND_COLOR = '#ffffff'
+PWA_APP_DISPLAY = 'standalone'
+PWA_APP_ORIENTATION = 'any'
+PWA_APP_START_URL = '/'
+PWA_APP_ICONS = [
+    {
+        'src': '/static/images/icons/icon-72x72.png',
+        'sizes': '72x72'
+    },
+    {
+        'src': '/static/images/icons/icon-96x96.png',
+        'sizes': '96x96'
+    },
+    {
+        'src': '/static/images/icons/icon-128x128.png',
+        'sizes': '128x128'
+    },
+    {
+        'src': '/static/images/icons/icon-144x144.png',
+        'sizes': '144x144'
+    },
+    {
+        'src': '/static/images/icons/icon-152x152.png',
+        'sizes': '152x152'
+    },
+    {
+        'src': '/static/images/icons/icon-192x192.png',
+        'sizes': '192x192'
+    },
+    {
+        'src': '/static/images/icons/icon-384x384.png',
+        'sizes': '384x384'
+    },
+    {
+        'src': '/static/images/icons/icon-512x512.png',
+        'sizes': '512x512'
+    }
+]
+PWA_APP_DIR = 'ltr'
+PWA_APP_LANG = 'en-US'
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
+=======
 EMAIL_HOST = 'smtp.gmail.com'
 
 EMAIL_HOST_USER ='jimlochran@gmail.com'
@@ -149,3 +211,4 @@ EMAIL_HOST_PASSWORD ='Organug07'
 
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+>>>>>>> b287ed77a7effdf55b05a626aa336ddd68b05584

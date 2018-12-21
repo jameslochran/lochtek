@@ -38,9 +38,10 @@ def view_profile(request, pk=None):
     if pk:
         user = User.objects.get(pk=pk)
         # profile = UserProfile.objects.get(pk=pk)
+        # args = {'user': user, 'profile': profile}
     else:
         user = request.user
-    args = {'user': user}
+        args = {'user': user}
     return render(request, 'accounts/profile.html', args)
 
 @login_required
