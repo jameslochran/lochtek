@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+{% load staticfiles %}
+
+
+<div class="container">
+  <div class="jumbotron">
+
+
+  <div class="container">
+    <h1>Thank you for your interest in becoming a DONE resource.</h1>
+    <p>Please click the create profile button below to fill out your professional profile. </p>
+    
+
+
+
+  </div>
+  </div>
+
+
+  <a href="{% url 'create_resource' %}" class="btn btn-outline-info">Create Profile</a>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}

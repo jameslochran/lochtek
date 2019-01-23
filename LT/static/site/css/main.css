@@ -296,6 +296,20 @@ body>.navbar-transparent {
   position: relative;
 }
 
+.myprofile {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)),
+    url("/static/professional-profile.jpg");
+  /* background-image: url("/static/construction-workers-daylight-men-544971.jpg"); */
+  background-color: #f8f6f6;
+  height: 400px;
+  /* background-position: left; */
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  position: relative;
+}
+
+
+
 .newprojects {
   /* background-image: url("/static/construction-workers-daylight-men-544971.jpg"); */
   background-color: #f8f6f6;
@@ -582,3 +596,9 @@ section .section-title {
 .BtnAdd {
   display: none;
 }
+ul.special {
+  list-style-type: none;
+}
+/* ul.errorlist {
+  list-style-type: none;
+} */

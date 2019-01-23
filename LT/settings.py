@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'DONE',
     'accounts',
     'pwa',
+    'resources',
+    'multiselectfield'
 ]
 
 MIDDLEWARE = [
@@ -139,6 +141,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
 
+
+
 # try:
 #     from .local_settings import *
 # except ImportError:
@@ -147,7 +151,7 @@ MEDIA_URL = '/media/'
 #test email configuratuon
 # EMAIL_HOST = 'localhost'
 # EMAIL_PORT = 1025
-<<<<<<< HEAD
+
 # EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_HOST_USER = 'sample@gmail.com'
 # EMAIL_HOST_PASSWORD = 'sample'
@@ -198,11 +202,11 @@ PWA_APP_ICONS = [
 PWA_APP_DIR = 'ltr'
 PWA_APP_LANG = 'en-US'
 
-try:
-    from .local_settings import *
-except ImportError:
-    pass
-=======
+# try:
+#     from .local_settings import *
+# except ImportError:
+#     pass
+# =======
 EMAIL_HOST = 'smtp.gmail.com'
 
 EMAIL_HOST_USER ='jimlochran@gmail.com'
@@ -211,4 +215,3 @@ EMAIL_HOST_PASSWORD ='Organug07'
 
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
->>>>>>> b287ed77a7effdf55b05a626aa336ddd68b05584

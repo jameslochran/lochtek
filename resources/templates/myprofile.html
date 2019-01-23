@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+{% block content %}
+<div class="container">
+  <div class="row">
+  <div class="col-md-12">
+
+
+<br>
+
+  <div class="myprofile">
+    <!-- <h1 class="dashboard-text">My Profile</h1> -->
+
+  </div>
+
+
+
+
+  <br>
+<br>
+  <div class="row">
+{% for profile in rprofile %}
+      <div class="col">
+        <ul class="list-group">
+  <li class="list-group-item text-muted">User Profile</li>
+  <li class="list-group-item text-right"><span class="pull-left"><strong>Email:</strong></span> {{ user.email }}</li>
+  <li class="list-group-item text-right"><span class="pull-left"><strong>Username:</strong></span> {{ user }}</li>
+  <li class="list-group-item text-right"><span class="pull-left"><strong>First Name:</strong></span> {{ user.first_name }}</li>
+  <li class="list-group-item text-right"><span class="pull-left"><strong>Last Name:</strong></span> {{ user.last_name }}</li>
+  </ul>
+  <br>
+    <ul class="list-group">
+      <li class="list-group-item text-muted">Work Profile</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>ID:</strong></span> {{ profile.id }}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Phone:</strong></span> {{ profile.phone }}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Resume / CV:</strong></span> {{ profile.cv }}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Street:</strong></span> {{ profile.street }}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>City:</strong></span> {{ profile.city }}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>State:</strong></span> {{ profile.state }}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Zip Code:</strong></span> {{ profile.zip}}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Years of Work Experience:</strong></span> {{ profile.work_exp }}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Proficiency:</strong></span> {{ profile.proficiency }}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Distance willing to travel:</strong></span> {{ profile.distance }}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Maximum # of days available per week:</strong></span> {{ profile.max_days }}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Maximum # of hours available per day:</strong></span> {{ profile.max_hours }}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Preferred days available:</strong></span> {{ profile.days_available }}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Rate in dollars per hour:</strong></span> {{ profile.rate }}</li>
+
+
+
+
+      </ul>
+      <br>
+      <!-- <a href="{% url 'create_resource' %}" class="btn btn-outline-info">Create Profile</a> -->
+        <a href="{% url 'update_resource' profile.id %}" class="btn btn-outline-info">Edit Profile</a>
+        <a href="{% url 'delete_resource' profile.id %}" class="btn btn-outline-danger">Delete Profile</a>
+
+
+      {% endfor %}
+
+      <br>
+      <!-- <p>Please create your work profile</p>
+       <a href="{% url 'create_resource' %}" class="btn btn-outline-info">Create Profile</a> -->
+
+
+
+</div>
+</div>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

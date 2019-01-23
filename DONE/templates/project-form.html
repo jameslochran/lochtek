@@ -26,12 +26,16 @@
       <div class="col-md-6">
 
     <br>
+    <a class="btn btn-large btn-info" href="javascript:void(0);" onclick="startIntro();">Take a guided tour</a>
+<br>
+<br>
 <h3>Complete the form below to get your project DONE!</h3>
+
 <br>
     <form   method="POST">
       {% csrf_token %}
       {{ form.as_p }}
-      <button class = "btn btn-primary" type="submit" name="button">Save & Submit for quote</button>
+      <button class = "btn btn-primary" type="submit" id='button' name="button">Save & Submit for quote</button>
       <a class = "btn btn-secondary" href="{% url 'list_projects' %}">cancel</a>
 
       {% if project %}
@@ -111,6 +115,84 @@
 
 {% endif %} -->
     </div>
+
+    <script type="text/javascript">
+         function startIntro(){
+           var intro = introJs();
+             intro.setOptions({
+               steps: [
+                 // {
+                 //   intro: "Hello world!"
+                 // },
+                 // {
+                 //   intro: "You <b>don't need</b> to define element to focus, this is a floating tooltip."
+                 // },
+                 {
+                   element: document.querySelector('#id_title'),
+                   intro: "Please enter a title for your project.",
+                   position: 'right'
+                 },
+                 {
+                   element: document.querySelector('#id_description'),
+                   intro: "Enter a breif description of your project.",
+                   position: 'right'
+                 },
+                 {
+                   element: document.querySelector('#id_type'),
+                   intro: "User the dropdown arrow to select your project type.",
+                   position: 'right'
+                 },
+                 {
+                   element: document.querySelector('#id_location'),
+                   intro: "Enter the location information for your project.",
+                   position: 'right'
+                 },
+                 {
+                   element: document.querySelector('#id_support'),
+                   intro: "Use the dropdown arrow to select the type of support your require.",
+                   position: 'right'
+                 },
+                 {
+                   element: document.querySelector('#id_estimated_time'),
+                   intro: "Select the estimated duration of your project.",
+                   position: 'right'
+                 },
+                 {
+                   element: document.querySelector('#id_sitetime'),
+                   intro: "Estimate the amount of time that the required resource will be needed onsite.",
+                   position: 'right'
+                 },
+                 {
+                   element: document.querySelector('#id_paymentterms'),
+                   intro: "Please select your organizations perferred payment terms.",
+                   position: 'right'
+                 },
+                 {
+                   element: document.querySelector('#id_phone'),
+                   intro: "Enter your perferred phone number.",
+                   position: 'right'
+                 },
+                 {
+                   element: document.querySelector('#id_contact_me'),
+                   intro: "Please select your perferred method of contact.",
+                   position: 'right'
+                 },
+                 {
+                   element: document.querySelector('#id_timeframe'),
+                   intro: "Please estimate when your project will start.",
+                   position: 'right'
+                 },
+                 {
+                   element: document.querySelector('#button'),
+                   intro: "Clicking the save and submit button will start the process.",
+                   position: 'right'
+                 },
+               ]
+             });
+
+             intro.start();
+         }
+       </script>
 
 {% endblock %}
 </div>
