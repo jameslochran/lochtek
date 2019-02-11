@@ -285,16 +285,48 @@ body>.navbar-transparent {
 }
 
 .myprojects {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)),
+  background: linear-gradient(
+                rgba(0, 0, 0, 0.3),
+                rgba(0, 0, 0, 0.3)
+                ),
     url("/static/Joy_Oil_gas_station_blueprints.jpg");
   /* background-image: url("/static/construction-workers-daylight-men-544971.jpg"); */
-  background-color: #f8f6f6;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  margin: 0px 0 0 0px;
+  position: relative;
+  float: left;
+  /* background-color: #f8f6f6;
   height: 300px;
   /* background-position: left; */
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   /* background-size: cover; */
-  position: relative;
+  /* position: relative; */
 }
+.newproject {
+  background: linear-gradient(
+                rgba(0, 0, 0, 0.3),
+                rgba(0, 0, 0, 0.3)
+                ),
+    url("/static/adult-architect-blueprint-o.jpg");
+  /* background-image: url("/static/construction-workers-daylight-men-544971.jpg"); */
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  margin: 0px 0 0 0px;
+  position: relative;
+  float: left;
+  /* background-color: #f8f6f6;
+  height: 300px;
+  /* background-position: left; */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  /* position: relative; */
+}
+
+
+
 
 .myprofile {
   background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)),
@@ -310,16 +342,16 @@ body>.navbar-transparent {
 
 
 
-.newprojects {
+/* .newprojects {
   /* background-image: url("/static/construction-workers-daylight-men-544971.jpg"); */
-  background-color: #f8f6f6;
-  height: 300px;
-  text-align: center;
+  /* background-color: #f8f6f6; */
+  /* height: 300px; */
+  /* text-align: center; */
   /* background-position: left; */
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   /* background-size: cover; */
-  position: relative;
-}
+  /* position: relative; */
+/* } */
 
 
 .myprojects-text {
@@ -328,7 +360,7 @@ body>.navbar-transparent {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #000;
+  color: #f7f4f4;
 }
 
 .dashboard-text {
@@ -602,3 +634,97 @@ ul.special {
 /* ul.errorlist {
   list-style-type: none;
 } */
+
+
+
+/* text over image */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900);
+
+.module {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("/static/Architect-Architecture-black-and-white-1537008.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  margin: 0px 0 0 0px;
+  position: relative;
+  float: left;
+}
+
+
+
+.module2 {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url({% static 'background2.jpg' %});
+  background-size: cover;
+  width: 300px;
+  height: 200px;
+  margin: 10px 0 0 10px;
+  position: relative;
+  float: left;
+}
+
+.top h2 {
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+.lr p {
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  margin: 0;
+}
+
+.mid h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 2rem;
+  transform: translate(-50%, -50%);
+}
+
+.cap p {
+  padding: 20px;
+  color: white;
+  position: absolute;
+  font: 12px Monaco, Mono-Space;
+  margin: 0;
+}
+
+.startContainer {
+    margin: -20px auto 0 auto;
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.98);
+    text-align: center;
+}
+
+.container-flex {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+}

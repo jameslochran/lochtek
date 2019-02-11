@@ -2,24 +2,20 @@
 
 {% load staticfiles %}
 {% block content %}
-<div class="container">
-  <div class="row">
-  <div class="col-md-12">
+<div class="myprojects mid">
+    <h2>My Projects</h2>
+
+</div>
 
 
-<br>
+<div class="container-flex">
+  <div class="container" style="margin-top: 25px;">
 
-  <div class="myprojects">
-    <h1 class="dashboard-text">My Projects</h1>
 
-  </div>
 
 <!-- <img src="{% static 'construction-workers-daylight-men-544971.jpg' %}" class="img-fluid" alt="Responsive image"> -->
 
 
-
-
-<br>
   <div class="row">
 
     {% for project in projects %}
@@ -71,16 +67,20 @@
 
 
 
-<hr>
 
 
 
-
-    </div>
 
 
   </div>
-    <a class="btn btn-primary" href="{% url 'create_project'%}">New Project</a>
+
+</div>
+<div class="container">
+  <a class="btn btn-primary" href="{% url 'create_project'%}">New Project</a>
+</div>
+
+
+
 
 
 
@@ -94,7 +94,7 @@
 
 
 
-</div>
+
 
 
 {% endblock %}
