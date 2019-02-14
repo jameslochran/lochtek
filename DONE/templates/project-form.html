@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'done.html' %}
 
 
 {% block content %}
@@ -6,7 +6,10 @@
 
 
 <div class="newproject mid">
-  <h2>New Project</h2>
+  <h2 class="display-1 text-center">Welcome to DONE!
+  <br>
+   Create your project below. </h2> -->
+
 <!-- <div class="myprojects-text">
 
   <!-- <h1 class="display-4">(NEW)</h1> -->
@@ -49,29 +52,54 @@
     </form>
     <br>
 </div>
-<div class="col-md-2">
+<div class="col-md-1">
 
 </div>
-<div class="col-md-4">
+<div class="col-md-5">
   <br>
-  <h2>Projects that get DONE!</h2>
+  <h2 class="text-center">Projects that get DONE!</h2>
   <div class="card-deck">
-  <div class="card" style="width: 18rem;">
+  <div class="card" style="width: 20rem;">
     <br>
-  <img class="card-img-top" src="/static/site/img/124-hierarchical-structure-32x32.png"  style="align-self: center;width: 32px;" alt="Card image cap">
+  <img class="card-img-top" src="/static/site/img/124-hierarchical-structure-32x32.png"  style="align-self: center;width: 32px; margin-top: 10px;" alt="Card image cap">
   <div class="card-body">
-    <h4 class="card-title">Architectural</h4>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <dt class="text-center">Architectural</dt>
+
+      <dl>
+        <dd>Building modifications</dd>
+        <dd>Branding changes</dd>
+        <dd>All moves adds and changes</dd>
+        <dd>Layouts and Lean modifications</dd>
+        <dd>CADD modifications</dd>
+        <dd>Conceptual drawings</dd>
+        <dd>Renderings</dd>
+        <dd>Consultant management</dd>
+        <dd>Vendor management</dd>
+
+
+      </dl>
+
+
     <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
   </div>
 </div>
 <div class="card" style="width: 18rem;">
   <br>
-<img class="card-img-top" src="/static/site/img/057-development-32X32.png" style="align-self: center;width: 32px;" alt="Card image cap">
+<img class="card-img-top" src="/static/site/img/057-development-32X32.png" style="align-self: center;width: 32px; margin-top: 10px;"  alt="Card image cap">
 <div class="card-body">
-  <h4 class="card-title">Mechanical</h4>
-  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  <dt class="text-center">Electrical - Telecom</dt>
+
+    <dl>
+      <dd>Feed and distribution works</dd>
+      <dd>Construction management</dd>
+      <dd>Service upgrades</dd>
+      <dd>Substation installs and modification</dd>
+      <dd>Offshift service install management</dd>
+      <dd>Consultant management</dd>
+      <dd>Vendor management</dd>
+
+
+    </dl>  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
 </div>
 </div>
 </div>
@@ -79,20 +107,38 @@
 <div class="card-deck">
 <div class="card" style="width: 18rem;">
   <br>
-<img class="card-img-top" src="/static/site/img/087-settings-32x32.png" style="align-self: center;width: 32px;" alt="Card image cap">
+<img class="card-img-top" src="/static/site/img/engineering-32x32.png" style="align-self: center;width: 32px; margin-top: 10px;"  alt="Card image cap">
 <div class="card-body">
-  <h4 class="card-title">Structural</h4>
-  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  <dt class="text-center">Engineering</dt>
+
+    <dl>
+      <dd>Owner's representative support</dd>
+      <dd>Bid-proposal analysis and support</dd>
+      <dd>Earned value cost analysis</dd>
+      <dd>Consultant management</dd>
+      <dd>Vendor management</dd>
+
+
+    </dl>  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
 </div>
 </div>
 <div class="card" style="width: 18rem;">
   <br>
-<img class="card-img-top" src="/static/site/img/107-planning-32x32.png" style="align-self: center;width: 32px;" alt="Card image cap">
+<img class="card-img-top" src="/static/site/img/user-32x32.png" style="align-self: center;width: 32px; margin-top: 10px;"  alt="Card image cap">
 <div class="card-body">
-  <h4 class="card-title">Electrical</h4>
-  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  <dt class="text-center">Environmental</dt>
+
+    <dl>
+      <dd>Permitting</dd>
+      <dd>Landfill closures</dd>
+      <dd>Solar</dd>
+      <dd>Remediation</dd>
+      <dd>Groundwater analysis</dd>
+      <dd>Consultant management</dd>
+      <dd>Vendor management</dd>
+
+
+    </dl>  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
 </div>
 </div>
 </div>
@@ -100,11 +146,65 @@
 <div class="card-deck">
 <div class="card" style="width: 18em;">
   <br>
-<img class="card-img-top" src="/static/site/img/035-chat-32x32.png" style="align-self: center;width: 32px;" alt="Card image cap">
+<img class="card-img-top" src="/static/site/img/035-chat-32x32.png" style="align-self: center;width: 32px; margin-top: 10px;"  alt="Card image cap">
 <div class="card-body">
-  <h4 class="card-title">Multi-discipline</h4>
-  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  <dt class="text-center">Mechanical</dt>
+
+    <dl>
+      <dd>HVAC</dd>
+      <dd>Process piping</dd>
+      <dd>Process systems and controls</dd>
+      <dd>Pumps and valves</dd>
+      <dd>Treatment systems</dd>
+      <dd>Controls</dd>
+      <dd>Consultant management</dd>
+      <dd>Vendor management</dd>
+
+    </dl>  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+</div>
+</div>
+<div class="card" style="width: 18rem;">
+  <br>
+<img class="card-img-top" src="/static/site/img/107-planning-32x32.png" style="align-self: center;width: 32px; margin-top: 10px;"  alt="Card image cap">
+<div class="card-body">
+  <dt class="text-center">Multi-discipline</dt>
+
+    <dl>
+
+        <dd>All crafts and trades</dd>
+        <dd>All Consultant management</dd>
+        <dd>All Vendor management</dd>
+
+
+      </dl>
+
+
+   <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+</div>
+</div>
+
+
+</div><br>
+<div class="card-deck">
+<div class="card" style="width: 18rem;">
+  <br>
+<img class="card-img-top" src="/static/site/img/087-settings-32x32.png" style="align-self: center;width: 32px; margin-top: 10px;"  alt="Card image cap">
+<div class="card-body">
+  <dt class="text-center">Structural</dt>
+
+    <dl>
+      <dd>Steel structure modifications</dd>
+      <dd>Concrete structure modifications</dd>
+      <dd>Foundations and footings</dd>
+      <dd>Cranes and lifting devices</dd>
+      <dd>Seismic modifications</dd>
+      <dd>Structural isolation</dd>
+      <dd>Dynamic loading</dd>
+      <dd>Consultant management</dd>
+      <dd>Vendor management</dd>
+
+
+    </dl>  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
 </div>
 </div>
 

@@ -259,6 +259,15 @@ body>.navbar-transparent {
   background-position: 0 0;
   background-repeat: no-repeat;
 }
+.category-Engineering {
+  display: block;
+  width: 128px;
+  height: 128px;
+  background-image: url("/static/site/img/engineering-32x32.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
 .category-Mechanical {
   display: block;
   width: 64px;
@@ -280,6 +289,14 @@ body>.navbar-transparent {
   width: 120px;
   height: 120px;
   background-image: url("/static/site/img/035-chat-32x32.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+.category-Environmental{
+  display: block;
+  width: 120px;
+  height: 120px;
+  background-image: url("/static/site/img/user-32x32.png");
   background-position: 0 0;
   background-repeat: no-repeat;
 }
@@ -494,7 +511,7 @@ h6 {
 
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 #team {
-    background: #eee !important;
+    /* background: #eee !important; */
 }
 
 .btn-primary:hover,
@@ -526,7 +543,7 @@ section .section-title {
 
 #team .card {
     border: none;
-    background: #ffffff;
+    /* background: #ffffff; */
 }
 
 .image-flip:hover .backside,
@@ -656,9 +673,39 @@ ul.special {
   float: left;
 }
 
+.module-contact {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("/static/contact_hero.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  margin: 0px 0 0 0px;
+  position: relative;
+  float: left;
+}
+
 
 
 .module2 {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url({% static 'background2.jpg' %});
+  background-size: cover;
+  width: 300px;
+  height: 200px;
+  margin: 10px 0 0 10px;
+  position: relative;
+  float: left;
+}
+
+.moduleA {
   background:
     linear-gradient(
       rgba(0, 0, 0, 0.6),

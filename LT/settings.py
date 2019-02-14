@@ -167,35 +167,35 @@ PWA_APP_ORIENTATION = 'any'
 PWA_APP_START_URL = '/'
 PWA_APP_ICONS = [
     {
-        'src': '/static/images/icons/icon-72x72.png',
+        'src': '/static/images/icons/DONE_PWA-72x72.png',
         'sizes': '72x72'
     },
     {
-        'src': '/static/images/icons/icon-96x96.png',
+        'src': '/static/images/icons/DONE_PWA-96x96.png',
         'sizes': '96x96'
     },
     {
-        'src': '/static/images/icons/icon-128x128.png',
+        'src': '/static/images/icons/DONE_PWA-128x128.png',
         'sizes': '128x128'
     },
     {
-        'src': '/static/images/icons/icon-144x144.png',
+        'src': '/static/images/icons/DONE_PWA-144x144.png',
         'sizes': '144x144'
     },
     {
-        'src': '/static/images/icons/icon-152x152.png',
+        'src': '/static/images/icons/DONE_PWA-152x152.png',
         'sizes': '152x152'
     },
     {
-        'src': '/static/images/icons/icon-192x192.png',
+        'src': '/static/images/icons/DONE_PWA-192x192.png',
         'sizes': '192x192'
     },
     {
-        'src': '/static/images/icons/icon-384x384.png',
+        'src': '/static/images/icons/DONE_PWA-384x384.png',
         'sizes': '384x384'
     },
     {
-        'src': '/static/images/icons/icon-512x512.png',
+        'src': '/static/images/icons/DONE_PWA-512x512.png',
         'sizes': '512x512'
     }
 ]
@@ -215,3 +215,5 @@ EMAIL_HOST_PASSWORD ='Organug07'
 
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+LOGIN_REDIRECT_URL = '/dashboard'

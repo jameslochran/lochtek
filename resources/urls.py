@@ -6,7 +6,8 @@ urlpatterns = [
     path('delete/<int:id>/', delete_resource, name='delete_resource'),
     path('update/<int:id>/', update_resource, name='update_resource'),
     path('myprofile', list_resources, name='my_profile'),
-    path('resource/', resourceView, name='resource'),
+    # path('resource/', resourceView, name='resource'),
+    path('', resourceView, name='resource'),
 
 
 

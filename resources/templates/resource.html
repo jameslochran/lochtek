@@ -5,23 +5,36 @@
 
 {% load staticfiles %}
 
+<div class="module mid">
+  <h2>Thank you for your interest in becoming a DONE resource.</h2>
+  Please click the create profile button below to fill out your professional profile.
+</div>
+
 
 <div class="container">
-  <div class="jumbotron">
+  <!-- <div class="jumbotron">
 
 
   <div class="container">
     <h1>Thank you for your interest in becoming a DONE resource.</h1>
     <p>Please click the create profile button below to fill out your professional profile. </p>
-    
+
 
 
 
   </div>
-  </div>
+  </div> -->
+  <br>
 
 
-  <a href="{% url 'create_resource' %}" class="btn btn-outline-info">Create Profile</a>
+  <p class='lead'>Please click the create profile button below to fill out your professional profile.</p>
+  <br>
+
+    <a href="{% url 'create_resource' %}" class="btn btn-outline-info">Create Profile</a>
+
+
+
+
 
 
 

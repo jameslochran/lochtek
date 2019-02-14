@@ -1,7 +1,10 @@
 
-{% extends 'base.html' %}
+{% extends 'done.html' %}
 
 {% block content %}
+<br>
+<br>
+<br>
 <div class="container">
 
 
@@ -9,7 +12,11 @@
 
 
 <div class="container">
-  <h1>Success! Email sent.</h1>
+  <h1>Thank you for submitting a project to get DONE!</h1>
+  <br>
+  <p class="lead">One of our experts will reach out to your shortly with a quote. </p>
+  <br>
+  <a class = "btn btn-success btn-lg" href="{% url 'list_projects' %}">Projects Dashboard</a>
 
 </div>
 </div>

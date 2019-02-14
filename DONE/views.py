@@ -17,7 +17,7 @@ def list_projects(request):
     projects = Project.objects.filter(customer = request.user).order_by('-id')
     return render(request, 'myprojects.html', {'projects' : projects})
 
-
+@login_required
 def create_project(request):
     User = get_user_model()
     form = ProjectForm(request.POST or None)
@@ -30,8 +30,8 @@ def create_project(request):
         #return redirect('list_projects')
         from_email = request.user.email
         subject = 'Please send me a quote'
-        message = 'Project title: ' +  post.title + '\n How I want to be contacted: ' + post.contact_me  + '\n Description: ' + post.description + '\n Type: ' + post.type +  '\n Support: ' + post.support +  '\n Timeframe: '+ post.timeframe +  '\n Login to DONE admin for details http://127.0.0.1:8000/admin/'
-        recipient_list = ['jlochran@gmail.com']
+        message = 'Project title: ' +  post.title + '\n How I want to be contacted: ' + post.contact_me  + '\n Description: ' + post.description + '\n Type: ' + post.type +  '\n Support: ' + post.support +  '\n Timeframe: '+ post.timeframe +  '\n Login to DONE admin for details http://lochtek.com/admin/'
+        recipient_list = ['jlochran@gmail.com', 'john@lochtek.com']
         # html_message = '<h2> Please review project</h2>'
 
         try:
@@ -42,6 +42,7 @@ def create_project(request):
 
     return render(request, 'project-form.html', {'form' : form})
 
+@login_required
 def update_project(request, id):
     project = Project.objects.get(id=id)
     form = ProjectForm(request.POST or None, instance=project)
@@ -52,7 +53,7 @@ def update_project(request, id):
 
     return render(request, 'project-form.html', {'form' : form, 'project' : project})
 
-
+@login_required
 def delete_project(request, id):
     project = Project.objects.get(id=id)
 
@@ -79,8 +80,8 @@ def emailView(request, id):
         if form.is_valid():
             from_email = request.user.email
             subject = 'Please send me a quote'
-            message = 'Client message: ' + form.cleaned_data['message'] + '\n Project title: ' + project.title +  '\n How I want to be contacted: ' + project.contact_me + '\n Description: ' + project.description + '\n Type: ' + project.type + '\n Support: ' + project.support + '\n Timeframe: ' + project.timeframe + '\n Login to DONE admin for details http://127.0.0.1:8000/admin/'
-            recipient_list = ['jlochran@gmail.com']
+            message = 'Client message: ' + form.cleaned_data['message'] + '\n Project title: ' + project.title +  '\n How I want to be contacted: ' + project.contact_me + '\n Description: ' + project.description + '\n Type: ' + project.type + '\n Support: ' + project.support + '\n Timeframe: ' + project.timeframe + '\n Login to DONE admin for details http://lochtek.com/admin/'
+            recipient_list = ['jlochran@gmail.com', 'john@lochtek.com']
             # html_message = '<h2> Please review project</h2>'
 
             try:

@@ -5,15 +5,19 @@ from django.contrib.auth.models import User
 class Project(models.Model):
 
     architectural = 'Architectural'
-    electrical =  'Electrical'
+    electrical =  'Electrical - Telecom'
     mechanical = 'Mechanical'
-    structural = 'Structural build or Demo'
+    structural = 'Structural'
+    engineering = 'Engineering'
+    environmental = 'Environmental'
     multi_discipline = 'Multi-discipline'
     PROJTYPE = (
                 (architectural, 'Architectural'),
-                (electrical,  'Electrical'),
+                (electrical,  'Electrical - Telecom'),
+                (engineering, 'Engineering'),
                 (mechanical, 'Mechanical'),
-                (structural, 'Structural build or Demo'),
+                (structural, 'Structural'),
+                (environmental, 'Environmental'),
                 (multi_discipline, 'Multi-discipline')
                 )
 
@@ -63,15 +67,13 @@ class Project(models.Model):
     pt15days = 'Net 15 days'
     pt45days = 'Net 45 days'
     pt90days = 'Net 90 days'
-    pt120days = "Net 120 days"
-    pt180days = "Net 180 days"
+    pt120days = 'Net 120 days'
     PAYMENTTERMS = (
         (pt30days, 'Net 30 days'),
         (pt15days, 'Net 15 days'),
         (pt45days, 'Net 45 days'),
         (pt90days, 'Net 90 days'),
-        (pt120days, 'Net 120 days'),
-        (pt180days, 'Net 180 days')
+        (pt120days, 'Net 120 days')
         )
 
     stfulltime = 'Onsite'
@@ -86,7 +88,7 @@ class Project(models.Model):
 
 
     customer = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
-    title = models.CharField(max_length=100, null=True, blank=True)
+    title = models.CharField(("Project Title"),max_length=100, null=True, blank=True)
     description = models.TextField(("description"), max_length=2000, null=True, blank=True)
     date_created = models.DateTimeField(("date"), auto_now_add = True)
     date_changed = models.DateTimeField(("changed date"), auto_now = True)

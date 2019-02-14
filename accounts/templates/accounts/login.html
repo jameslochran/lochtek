@@ -2,6 +2,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<br>
+<br>
 <div class="container">
 
 
@@ -19,9 +21,14 @@
         {{ form.as_p }}
         <button type="submit">Login</button>
     </form>
-    <br>
+
   <!-- <a class = "btn btn-primary btn-sm" href="{% url 'accounts:reset_password' %}">Reset Password</a> -->
 </div>
+<br>
+<br>
+<p>Not currently a user. Click below to sign up, it's FREE</p>
+<a class="btn btn-success btn-lg" href="{% url 'accounts:register' %}">Sign Up </a>
+<br>
 </div>
 </div>
 {% endblock %}

@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class ProjectForm(forms.ModelForm):
 
-    title = forms.CharField(required=False)
+    # title = forms.CharField(required=False)
 
     description = forms.CharField(widget=forms.Textarea(
         attrs={
