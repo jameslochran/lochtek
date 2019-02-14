@@ -209,8 +209,8 @@ PWA_APP_LANG = 'en-US'
 # =======
 EMAIL_HOST = 'smtp.gmail.com'
 
-EMAIL_HOST_USER ='jimlochran@gmail.com'
-EMAIL_HOST_PASSWORD ='Organug07'
+EMAIL_HOST_USER ='replaceme'
+EMAIL_HOST_PASSWORD ='example'
 
 
 EMAIL_PORT = 587
